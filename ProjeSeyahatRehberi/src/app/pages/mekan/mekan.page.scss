@@ -1,0 +1,31 @@
+ion-content {
+    --ion-background-color: #f3ededc7;
+}
+ion-header{
+    --ion-background-color: #c7b8b8fd;
+}
+ion-img {
+    border-radius: 10px;
+    display: block;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100%!important;
+}
+.card{
+    background-color: #c7b8b8fd;
+    width: 700px !important;
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+    overflow: visible;
+}
+ion-title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black; 
+}
+ion-card-subtitle{
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    font-size: 15px;
+}

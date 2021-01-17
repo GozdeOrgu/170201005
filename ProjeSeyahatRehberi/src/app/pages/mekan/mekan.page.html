@@ -1,0 +1,24 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/lokasyon">Back</ion-back-button>
+    </ion-buttons>
+    <ion-title >GEZİLECEK YERLER</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item  lines="none" *ngFor="let yer of yerler">
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-subtitle>{{yer.mekan}}</ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-img [src]="yer.img"></ion-img>
+    </ion-card-content>
+  </ion-card> 
+</ion-item> 
+</ion-content>
+

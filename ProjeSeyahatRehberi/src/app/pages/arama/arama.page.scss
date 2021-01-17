@@ -1,0 +1,23 @@
+ion-content {
+    --ion-background-color: #f3ededc7;
+}
+ion-header{
+    --ion-background-color: #c7b8b8fd;
+}
+ion-title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black; 
+    
+}
+.baslikTitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+  }

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>GEZİ REHBERİ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-toolbar>
+    <ion-title class="baslikTitle">
+      Arama
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-searchbar type="text" debounce="500" (ionChange)="getItems($event)"></ion-searchbar>
+
+  <ion-list *ngIf="isItemAvailable">
+      <ion-item button *ngFor="let item of sehirler" [routerLink]="['/', 'arama', item.id]">
+        {{ item.sehir }}
+      </ion-item>
+  </ion-list>
+
+</ion-content>
