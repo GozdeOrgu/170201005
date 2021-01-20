@@ -75,7 +75,7 @@ $ ionic cordova plugin add cordova-sqlite-storage
 $ ionic cordova plugin add uk.co.workingedge.cordova.plugin.sqliteporter
 ```
 
-- `/assets/` içine `seed.sql` adında bir dosya eklendi. Bu dosyanın içinde **lokasyon** ve **mekan** tabloları oluşturuldu. 'lokasyon' tablosunda integer olarak otomatik oluişturulan bir id, text tipinde isim alınan sehir ve yine text tipinde görüntünün dosya yolunun alındığı img sütunları bulunmaktadır. 'mekan' tablosunda ise integer olarak otomatik oluişturulan bir id, text tipinde isim alınan mekan, text tipinde görüntünün dosya yolunun gösterildiği img ve integer olarak şehri tanımlayan bir sehirID sütunu bulunmaktadır. 
+- `/assets/` içine `seed.sql` adında bir dosya eklendi. Bu dosyanın içinde **lokasyon** ve **mekan** tabloları oluşturuldu. 'lokasyon' tablosunda integer olarak otomatik oluişturulan bir id, text tipinde isim alınan sehir ve yine text tipinde görüntünün dosya yolunun alındığı img sütunları bulunmaktadır. 'mekan' tablosunda ise integer olarak otomatik oluşturulan bir id, text tipinde isim alınan mekan, text tipinde görüntünün dosya yolunun gösterildiği img ve integer olarak şehri tanımlayan bir sehirID sütunu bulunmaktadır. 
 - Dosyayı yüklemek için `app/app.module.ts` içine `HttpClientModule` ekledim.
 - `services/database.service.ts` dosyasında gerekli değişiklikleri yaptım.
 - `uygulama.db` adında bir sqlite yarattım. 
@@ -96,7 +96,7 @@ $ ionic cordova plugin add uk.co.workingedge.cordova.plugin.sqliteporter
 Projede anasayfa, lokasyon, mekan ve arama olmak üzere dört sayfa bulunmaktadır. Sayfalar projenin src > app > pages klasörü altında yer almaktadır. 
 
 - **Anasayfa:** Bu sayfa uygulama başlatıldığında ortaya çıkan ilk sayfadır. Bazı illere ait birer fotoğraf uygulamayı tanıtmak amacıyla burada gösterilmektedir. Sol üstteki menü yardımıyla diğer sayfalara geçiş yapılabilmektedir.
-- **Lokasyon:** Bu sayfa illerin listelendiği sayfadır.  Veri tabanından verilerin çekilebilmesi için yukarıda anlatlan `getSehirler()` fonksiyonu çağırılır. Böylece herhangi bir ilin üstüne tıklandığında uygulama kullanıcıyı o şehre ait gezilecek yerlerin listelendiği sayfaya yönlendirmektedir.Bunun için lokasyon sayfasından mekan sayfasına bir id bilgisi gönderilmektedir. id bilgisi gönderebilmek için `app-routing.module.ts` üzerinde lokasyon sayfasını şöyle tanımladım:
+- **Lokasyon:** Bu sayfa illerin listelendiği sayfadır.  Veri tabanından verilerin çekilebilmesi için yukarıda anlatılan `getSehirler()` fonksiyonu çağırılır. Böylece herhangi bir ilin üstüne tıklandığında uygulama kullanıcıyı o şehre ait gezilecek yerlerin listelendiği sayfaya yönlendirmektedir.Bunun için lokasyon sayfasından mekan sayfasına bir id bilgisi gönderilmektedir. id bilgisi gönderebilmek için `app-routing.module.ts` üzerinde lokasyon sayfasını şöyle tanımladım:
 ```
 const routes: Routes = [
 ...
